@@ -1,0 +1,269 @@
+// for xtra large screens (wide screens)
+@include mediaXl{
+
+}
+
+// for large screens (Desktops & Laptops)
+@include mediaLg{
+    body{
+         //------------------for dashboard page start here---------------------
+        & .dashboard-main-container{
+            
+            & .general-main-container{
+    
+                & .right-content{
+    
+                    & .main-content{
+    
+                        & .menuTitle{
+                            
+                            & p{
+                               
+                                & span{
+                                    display: none !important;
+                                }
+                            }
+                            & .titleIcons{
+                                
+                                & a{
+                                   
+                                }
+                            }
+                        }
+                        & .tab-main-container-grid{
+                            width: 28% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for large screens (Desktops & Laptops)
+@include mediaLg-1{
+    body{
+        .card{
+            overflow: auto !important;
+        
+            &-header{
+                width: 850px !important;
+        
+                & label{
+                    width: 18% !important;
+                }
+                & h3{
+                    width: 80% !important;
+                }
+            }
+            // & canvas{
+            //     width: 850px !important;
+            //     height: 300px !important;
+            // }
+        }
+        //------------------for login page start here---------------------
+        & .main-containerL{
+            & .top-headerL{
+                font-size: 1em !important;
+            }
+        }
+         //------------------for dashboard page start here---------------------
+        & .dashboard-main-container{
+
+            & .general-main-container{
+    
+                & .right-content{
+    
+                    & .main-content{
+
+                        & .menuTitle{
+                            width: 88% !important;
+                            
+                            & p{
+                               
+                                & span{
+                                    display: none !important;
+                                }
+                            }
+                        }
+                        & .tab-main-container-grid{
+                            width: 38% !important;
+                            margin-right: 11% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for large screens (Desktops & Laptops)
+@include mediaLg-2{
+    body{
+        //------------------for login page start here---------------------
+        & .main-containerL{
+            & .leftL{
+                display: block !important;
+                width: 100% !important;
+                border: none !important;
+                margin: 0px auto 20px auto !important;
+            }
+            & .right{
+                display: block !important;
+                width:80% !important;
+                margin: 0px auto !important;
+            }
+        }
+        //------------------for dashboard page start here---------------------
+        & .dashboard-main-container{
+            & .top-header{
+                & .profile{
+                    width: 240px !important;
+                   
+                    & .header-profile-img{
+                        width:55px !important;
+                    }
+                }
+                & .label{
+                    width: 70px !important;
+                   
+                    & h1{
+                        display: none !important;
+                    }
+                    & h2{
+                        font-size: 1.5em !important;
+                        margin-left: 2% !important;
+                        line-height: 2 !important;
+                        font-weight: bolder !important;
+                        display:block !important;
+                    }
+                    & p{
+                        display: none !important;
+                    }
+                }
+            }
+            & .general-main-container{
+                
+                & .right-content{
+    
+                    & .main-content{
+    
+                        & .menuTitle{
+                            width: 90% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for medium screens (Tablets & small Laptops)
+@include mediaMd{
+    body{
+        //------------------for login page start here---------------------
+        & .main-containerL{
+            & .top-headerL{
+                font-size: 0.8em !important;
+            }
+        }
+    }
+}
+
+// for medium screens (Tablets & small Laptops)
+@include mediaMd-1{
+    body{
+        //------------------for login page start here---------------------
+        & .main-containerL{
+            & .right{
+                width: 100% !important;
+                & .login-form{
+                    font-size: 0.9em !important;
+                }
+            }
+        }
+        //------------------for dashboard page start here---------------------
+        & .dashboard-main-container{
+            
+            & .general-main-container{
+                
+                & .right-content{
+    
+                    & .main-content{
+    
+                        & .tab-main-container-grid{
+                            width: 90% !important;
+                            margin: 0px auto !important;
+                        }
+                    }
+                    //--------------------------- Footer page begins -----------------------
+                    .main-footer{
+    
+                        & p{
+                            margin-left: 40px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for small screens (small phones)
+@include mediaSm{
+    body{
+        //------------------for login page start here---------------------
+        & .main-containerL{
+            padding: 0 !important;
+
+            & .top-headerL{
+                font-size: 0.6em !important;
+            }
+            & .main-contentL{
+                & p{
+                    font-size: 0.8em !important;
+                 }
+                 & .login-form{
+                    font-size: 0.8em !important;
+                }
+            }
+        }
+        //------------------for dashboard page start here---------------------
+        & .dashboard-main-container{
+
+            & .general-main-container{
+                
+                & .right-content{
+    
+                    & .main-content{
+                        padding-left: 80px !important;
+
+                        & .menuTitle{
+                            height: 100px !important; 
+                            padding: 0 !important; 
+
+                            & p{
+                               width: 100% !important;
+                               text-align: center !important;
+                                border-bottom: 1px solid $blue !important;
+                                float: none !important;
+                            }
+                            & .titleIcons{
+                                    float: none !important;
+                                    border: none !important;
+                                & a{
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for small screens (small phones)
+@include mediaSm-1{
+    
+}

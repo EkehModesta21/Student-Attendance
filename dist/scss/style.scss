@@ -1,0 +1,1319 @@
+@import 'config';
+@import 'respondsive';
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+a{
+    text-decoration: none !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //@include easeOut;
+}
+body{
+    //------------------for login page start here---------------------
+    @include successCheck;
+    & .main-containerL{
+        padding: 50px;
+        background-image: url(../img/bg-img1.jpg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+
+        *{
+            @include easeOut
+        }
+        & .main-contentL{
+            background-color: rgba($white,0.6); 
+            padding: 5% 0;
+            margin: 0px auto;
+            //box-shadow: 0 0 10px $black;
+
+            & .top-headerL{
+                height: 15%;
+                text-align: center;
+                font-size: 1.2em;
+                margin: 2% 0;
+                padding: 0 3% 5% 3%;
+            }
+            & .mid-contentL{
+                height: 77%;
+                padding-bottom: 5%;
+
+                & .leftL{
+                    display: inline-block;
+                    width: 49.5%;
+                    border-right: 0.5px solid rgba($blue,0.9);
+
+                    & .left-content{
+                        width: 80%;
+                        margin: 0px auto;
+                        & img{
+                            width: 50%;
+                            margin: 0px auto;
+                            margin-bottom: 10px;
+                        }
+                        & p{
+                            text-align:justify;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+                & .right{
+                    display: inline-block;
+                    width: 49.5%;
+                    vertical-align: top;
+
+                    & .login-form{
+                        width: 80%;
+                        margin: 0px auto;
+                        padding: 2% 0;
+
+                        & .logo-img img{
+                            width: 30%;
+                            padding: 5px;
+                            border: 2px solid $white;
+                            border-radius: 100px;
+                            margin: 0px auto;
+                            overflow: hidden;
+                        }
+                        & .input-default{
+                            position: relative;
+                            display: flex;
+                            flex-wrap: nowrap;
+                            height: auto;
+                            margin: 5% 0;
+                            border: none;
+                            background-color: rgba($white,0.5);
+                            border-bottom: 3px solid rgba($blue,0.9);
+
+                            &-in{
+                                height: 50px;
+                                width:100%;
+                                font-size: 1.2em;
+                                color: rgba($blue,0.9);
+                                font-weight: bolder;
+                                border: none;
+                                border-radius: 5px;
+                                padding-left: 2%;
+                                outline: none;
+                                background-color: transparent;
+                            }
+                            & .fa{
+                                padding:13px 15px;
+                                margin: 0px auto;
+                                width: 10px;
+                                font-size: 1.5em;
+                                color: rgba($blue,0.9); 
+                            }
+                        }
+                        
+                        & .btn-login{
+                            width: 30%;
+                            padding: 3% 0;
+                            font-size: 1.2em;
+                            color: white;
+                            text-align: center;
+                            border-radius: 5px;
+                            border: none;
+                            background-color: rgba($blue,0.9);
+                            box-shadow: 2px 2px 2px rgba($black,0.5);
+                        
+                            &:hover{
+                                background-color: black;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    //------------------for dashboard page start here---------------------
+    @include offCanvassForms;
+    @include slideValue;
+    & .dashboard-main-container{
+        & .top-header{
+            position:fixed;
+            top: 0;
+            z-index: 1;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            height: 50px;
+            background-color: rgba($blue,1);
+            color: rgba($white,0.9);
+            overflow: hidden;
+
+            & .logo{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+                height: 50px;
+                width: 58px;
+                text-align: center;
+                background-color: rgba($black,0.3);
+
+                &  i{
+                    text-align: center;
+                    padding:1%;
+                    line-height: 1.5;
+                    font-size: 2em;
+                }
+            }
+            & .label{
+                display: inline-block;
+                width: 550px;
+                margin-left: 5px;
+
+                & h1{
+                    display: inline-block;
+                    margin: 0;
+                    font-size: 1.5em;
+                    padding: 0 0 0 1%;
+                    line-height: 2;
+                }
+                & h2{
+                    display: none;
+                }
+                & p{
+                    display: inline-block;
+                    margin: 0;
+                    line-height: 2;
+                }
+            }
+            & .profile{
+                vertical-align: top;
+                margin: 0;
+                float: right;
+                height: 50px;
+                padding: 5px 0 0 0;
+                width: 250px;
+                background-color: rgba($black,0.2);
+
+                & .header-profile-img{
+                    display: inline-block;
+                    text-align: center;
+                    margin: 0;
+                    width: 70px;
+
+                    & i{
+                        font-size: 1.6em;
+                        box-shadow: 0 0 5px rgba($white,0.9);
+                        padding: 6px 10px;
+                        border-radius: 50px;
+                    }
+                }
+                & .standBy{
+                    display: inline-block;
+                    width: 80px;
+
+                    & a{
+                        text-decoration: none;
+                        color: rgba($white,0.9);
+                        padding: 7%;
+                        box-shadow: 0 0 5px rgba($white,0.9);
+                        border-radius: 5px;
+
+                        &:hover{
+                            background-color: rgba($blue,1);
+                        }
+                    }
+                }
+                & .SignOut{
+                    display: inline-block;
+                    width: 80px;
+
+                    & a{
+                        text-decoration: none;
+                        color: rgba($white,0.9);
+                        padding: 7%;
+                        box-shadow: 0 0 5px rgba($white,0.9);
+                        border-radius: 5px;
+
+                        &:hover{
+                            background-color: rgba($blue,1);
+                        }
+                    }
+                }
+            }
+        }
+        & .general-main-container{
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 50px);
+            padding: 0;
+            margin-top: 50px;
+            
+            & .left-bar-switch{
+                @include easeOut;
+                float: left;
+                position: fixed;
+                background-color: black;
+                color: rgba($white,0.6);
+                margin: 0;
+                padding: 0;
+                width: 260px;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                z-index: 1;
+                
+                & .left-bar-container{
+                    text-align: left;
+                    padding: 0;
+                    width: 260px;
+                    height: 180px;
+                    margin-bottom: 50px;
+                    cursor: pointer;
+
+                    & .repSign{
+                        display: none;
+                    }
+                    & tr{
+                        font-size: 0.9em;
+                        
+                        & a{
+                            text-decoration: none;
+                            color: rgba($white,0.6);
+                        }
+                        &:hover{
+                            background-color: rgba($blue,0.9);
+                            color: rgba($white,1);
+                        }
+                        & i{
+                            padding: 0 0 0 5px;
+                            font-size: 1.5em;
+                            margin: 0 12px;
+                            @include easeOut;
+                        }
+                        & .leftBarText{
+                            @include easeOut;
+                            display: inline-block;
+                            width: calc(100% - 65px);
+                        }
+                    }
+                    & .slideArrow{
+                        & #slideArrow1{
+                            display: none;
+                            @include easeOut;
+                        }
+                        & #slideArrow2{
+                            color: rgba($white,0.8);
+                            font-size: 1.5em;
+                            width: 100%;
+                            padding-right:20px; 
+                            text-align: right;
+                            display: inline-block;
+                            @include easeOut;
+                        }
+                    }
+                }
+                & .active{
+                    background-color: rgba($blue,0.9);
+                    color: rgba($white,1);
+                }
+            }
+            
+            & .left-bar{
+                @include easeOut;
+                float: left;
+                position: fixed;
+                background-color: black;
+                color: rgba($white,0.6);
+                margin: 0;
+                padding: 0;
+                width: 58px;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                z-index: 1;
+
+                & .left-bar-container{
+                    text-align: left;
+                    padding: 0;
+                    width: 260px;
+                    height: 180px;
+                    margin-bottom: 80px;
+                    cursor: pointer;
+
+                    & .repSign{
+                        display: none;
+                    }
+                    & tr{
+                        font-size: 0.9em;
+
+                        & a{
+                            text-decoration: none;
+                            color: rgba($white,0.6);
+                        }
+                        &:hover{
+                            background-color: rgba($blue,0.9);
+                            color: rgba($white,1);
+                        }
+                        & i{
+                            padding: 0 0 0 5px;
+                            font-size: 1.5em;
+                            margin: 0 15px;
+                            @include easeOut;
+                        }
+                        & .leftBarText{
+                            @include easeOut;
+                            display: inline-block;
+                        }
+                    }
+                    & .slideArrow{
+                        & #slideArrow1{
+                            color: rgba($white,0.8);
+                            font-size: 1.5em;
+                            width: 100%;
+                            padding: 0 0 0 22px;
+                            display: inline-block;
+                            @include easeOut;
+                        }
+                        & #slideArrow2{
+                            display: none;
+                            @include easeOut;
+                        }
+                    }
+                }
+                & .active{
+                    background-color: rgba($blue,0.9);
+                    color: rgba($white,1);
+                }
+            }
+            
+            & .right-content{
+                
+                & .main-content{
+                    margin: 0;
+                    padding: 15px 0 0 110px;
+                    height: 100%;
+                    background-color: rgba($black,0.1);
+                    min-height: calc(100vh - 100px);
+
+                    & .menuTitle{
+                        height: 40px;
+                        line-height: 1.8;
+                        width: 94.5%;
+                        margin: 0 0 20px 0;
+                        padding: 0 0 0 20px;
+                        background-color: rgba($white, 0.9);
+
+                        & p{
+                            color:$blue;
+                            font-size: 1.3em;
+                            float: left;
+
+                            & span{
+                                color: rgba(red, 0.8);
+
+                                & i{
+                                    padding: 6px 7px;
+                                    border: 1px solid rgba(red, 0.8);
+                                    border-radius: 50px;
+                                    font-size: 0.8em;
+                                }
+                            }
+                        }
+                        & .titleIcons{
+                            float: right;
+                            font-weight: lighter;
+                            margin-right: 20px;
+
+                            & a{
+                                margin: 0 10px;
+                                color: rgba(red, 0.7);
+
+                                &:hover{
+                                    color: rgba(gray, 0.8);
+                                }
+                            }
+                        }
+                    }
+                }
+                //--------------------------- Livestock page begins -----------------------
+                & .dashboard{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                        
+                    }
+                    &-chart{
+                        & #PandP_singelBarChart{
+                            width: 1000px;
+                        }
+                    }
+                    &-trans{
+                        & .card{
+                            //----------------------for edit-------------------
+                            & .editBox{
+                                width: 100%;
+                    
+                                .fBox{
+                                    width: 20%;
+                                    min-width: 216px;
+                                    vertical-align: top;
+                                    height: 50px;
+                                    border-radius: 5px;
+                                    border: 0.5px solid rgba($black,0.2);
+                                    padding: 0 5px;
+                                    box-shadow: 1px 1px 1px rgba($black,0.1);
+                                    margin: 15px 15px 0 15px;
+                                }
+                                &-cat{
+                                    @extend .fBox;
+                                }
+                                &-tArea{
+                                    vertical-align: top;
+                                    padding: 0 5px;
+                                    border-radius: 5px;
+                                    box-shadow: 1px 1px 1px rgba($black,0.1);
+                                    border: 0.5px solid rgba($black,0.2);
+                                    margin: 15px 15px 0 15px;
+                                }
+                                &-qty{
+                                    @extend .fBox;
+                                }
+                                &-mtl{
+                                    @extend .fBox;
+                                }
+                                &-eBtn{
+                                    height: 43px;
+                                    border-radius: 5px;
+                                    box-shadow: 2px 2px 2px rgba($black,0.1);
+                                    color: rgba($white,0.9);
+                                    background-color: rgba($blue, 0.8);
+                                    border: none;
+                                    margin: 15px 15px 0 15px;
+                                    box-shadow: 2px 2px 2px rgba($black, 0.3);
+                                    width: 90px;
+                                        
+                                    &:hover{
+                                        background-color: rgba($black, 0.8);
+                                    }
+                                }
+                            }
+                            & .red{
+                                text-decoration: none;
+                                color: rgba(red, 0.8);
+                                font-weight: 550;
+                    
+                                &:hover{
+                                    color: rgba(red, 1);
+                                    border-bottom: 1px solid rgba(red, 1);
+                                }
+                            }
+                            & .blue{
+                                text-decoration: none;
+                                color: rgba($blue, 0.8);
+                                font-weight: 550;
+                    
+                                &:hover{
+                                    color: rgba($blue, 1);
+                                    border-bottom: 1px solid rgba($blue, 1);
+                                }
+                            }
+                            & .green{
+                                text-decoration: none;
+                                color: rgba($green, 0.8);
+                                font-weight: 550;
+                    
+                                &:hover{
+                                    color: rgba($green, 1);
+                                    border-bottom: 1px solid rgba($green, 1);
+                                }
+                            }
+
+                            // ---------------- for portal ----------------
+                            & .portalCheck{ 
+                                margin: 0px auto;
+                                width: 100%;
+
+                                & form{
+                                    overflow: hidden;
+
+                                    & label{ 
+                                        width: 200px;
+                                        margin: 20px;
+                                    }
+                                    & .radioContainer{
+                                        display: inline-block;
+                                        position: relative;
+                                        cursor: pointer;
+                                        user-select: none;
+                                        padding-left: 30px;
+                                        font-weight: 400;
+
+                                        & input{
+                                            display:none;
+
+                                            &:checked + .circle{
+                                                background-color: rgba($blue,1);
+
+                                                &:after{
+                                                    content: "";
+                                                    height: 10px;
+                                                    width: 10px;
+                                                    background-color: white;
+                                                    position: absolute;
+                                                    border-radius: 50%; 
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-52%, -52%);
+                                                }
+                                            }
+                                            
+                                        }
+                                        & .circle{
+                                        display: inline-block;
+                                            height: 25px;
+                                            width: 25px;
+                                            background-color: rgba($blue,0.2);
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            border-radius: 50%;
+                                        }
+                                        &:hover .circle{
+                                            background-color: rgba($blue,1);
+                                        }
+                                    }
+                                    & .btn{
+                                        box-shadow: 2px 2px 2px rgba($black, 0.6);
+                                        width: 90px;
+                                        color: rgba($white, 0.9);
+                                        background-color: rgba($blue, 0.8);
+                                        
+                                        &:hover{
+                                            background-color: rgba($black, 0.8);
+                                        }
+                                    }
+                                }
+                            }
+
+                            & img{
+                                width: 50px;
+                            }
+                        }
+                        & .activate{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Egg production page begins -----------------------
+                & .eggProduction{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        & #egg_singelBarChart{
+                            width: 1000px;
+                        }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Feed production page begins -----------------------
+                & .feedProduction{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        & #feedD_singelBarChart{
+                            width: 1000px;
+                        }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Feed Bags page begins -----------------------
+                & .feedBag{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        & #feedB_singelBarChart{
+                            width: 1000px;
+                        }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Raw Materials page begins -----------------------
+                & .rawMaterials{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }  
+                    }
+                    
+                }
+                 //--------------------------- Income From Sales begins -----------------------
+                 & .incomeFromSales{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        } 
+                    }
+                    
+                }
+                //--------------------------- Customers Details page begins -----------------------
+                & .customersDetails{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Farm Expenditure page begins -----------------------
+                & .farmExpenditure{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Medication page begins -----------------------
+                & .medication{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Imprest Bank & Credit page begins -----------------------
+                & .imprestBankCredit{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }  
+                    }
+                    
+                }
+                //--------------------------- Invoice page begins -----------------------
+                & .invoiceStyle{
+                    width: 94.5%;
+
+                    *{
+                        @include easeOut;
+                    }
+                    &-inventCat{
+                        & .liveTitle{
+                            width: 90%;
+                            float: left;
+                        }
+                        & .liveAdd{
+                            color: rgba(red, 0.8);
+                            float: right;
+                            text-align: right;
+                            width: 10%;
+                            font-weight: 450;
+
+                            &:hover{
+                                border-bottom: 1px solid rgba(red, 0.8);
+                            }
+                        }
+                        & .remove{
+                            text-decoration: none;
+                            color: rgba(red, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba(red, 1);
+                                border-bottom: 1px solid rgba(red, 1);
+                            }
+                        }
+                        & .edit{
+                            text-decoration: none;
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    &-chart{
+                        // & #feedB_singelBarChart{
+                        //     width: 1000px;
+                        // }
+                    }
+                    &-trans{
+                        & .details{
+                            color: rgba($blue, 0.8);
+                            font-weight: 550;
+
+                            &:hover{
+                                color: rgba($blue, 1);
+                                border-bottom: 1px solid rgba($blue, 1);
+                            }
+                        }
+                    }
+                    
+                }
+                //--------------------------- Footer page begins -----------------------
+                .main-footer{
+                    color: rgba($black,0.5);
+                    font-weight: bolder;
+                    margin: 0;
+                    padding: 0 3% 0 6%;
+                    height: 40px;
+                    background-color: white;
+
+                    & p{
+                        display: inline-block;
+                        width: 39%;
+                        line-height:2.8;
+                        margin: 0;
+                        padding: 0 1%;
+                    }
+                    & .admin-login{
+                        display: inline-block;
+                        width: 59%;
+                        text-align: right;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 0.9em;
+
+                        & a{
+                            color: rgba(red, 0.8);
+
+                            & label{
+                                margin: 0px auto;
+                                & i{
+                                    font-size: 1.1em;
+                                }
+                            }         
+                            &:hover{
+                                border-bottom: 2px solid red;
+                                padding: 1% 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
